@@ -20,7 +20,7 @@ RSpec.describe GramsController, type: :controller do
   describe "grams#create action" do 
     it "should successfully show the new form" do 
       post :create, params: { gram: { message: 'Hello!' } }
-      expect(response).to redirect_to_root_path
+      expect(response).to redirect_to root_path
 
       gram = Gram.last
       expect(gram.message).to eq("Hello!")
